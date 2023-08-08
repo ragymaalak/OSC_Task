@@ -1,0 +1,65 @@
+osc@osc-VirtualBox:~$ mkdir Ragy\ Fahmy
+osc@osc-VirtualBox:~$ ls
+ Desktop   Documents   Downloads   Music   Pictures   Public  'Ragy Fahmy'   snap   Templates   Videos
+osc@osc-VirtualBox:~$ cd Ragy\ Fahmy/
+osc@osc-VirtualBox:~/Ragy Fahmy$ mkdir Documents
+osc@osc-VirtualBox:~/Ragy Fahmy$ ls
+Documents
+osc@osc-VirtualBox:~/Ragy Fahmy$ cd Documents/
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents$ touch file1.txt file2.txt file3.txt
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents$ ls
+file1.txt  file2.txt  file3.txt
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents$ cd ~/Ragy\ Fahmy/
+osc@osc-VirtualBox:~/Ragy Fahmy$ touch ".hidden_file"
+osc@osc-VirtualBox:~/Ragy Fahmy$ ls
+Documents
+osc@osc-VirtualBox:~/Ragy Fahmy$ ls -a
+.  ..  Documents  .hidden_file
+osc@osc-VirtualBox:~/Ragy Fahmy$ cd Documents/
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents$ nano file1.txt 
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents$ cat file1.txt 
+hello file1
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents$ cd ..
+osc@osc-VirtualBox:~/Ragy Fahmy$ nano ~/Ragy\ Fahmy/Documents/
+osc@osc-VirtualBox:~/Ragy Fahmy$ nano ~/Ragy\ Fahmy/Documents/file1.txt 
+osc@osc-VirtualBox:~/Ragy Fahmy$ cat ~/Ragy\ Fahmy/Documents/file1.txt 
+hello file1
+osc@osc-VirtualBox:~/Ragy Fahmy$ cd -
+/home/osc/Ragy Fahmy/Documents
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents$ mkdir ./-
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents$ ls
+-  file1.txt  file2.txt  file3.txt
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents$ cd ./-
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents/-$ cp -r ~/Ragy\ Fahmy/Documents/ ~/Ragy\ Fahmy/My_Documents
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents/-$ ls
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents/-$ cd ..
+osc@osc-VirtualBox:~/Ragy Fahmy/Documents$ cd ..
+osc@osc-VirtualBox:~/Ragy Fahmy$ ls
+Documents  My_Documents
+osc@osc-VirtualBox:~/Ragy Fahmy$ cat My_Documents/
+cat: My_Documents/: Is a directory
+osc@osc-VirtualBox:~/Ragy Fahmy$ ls My_Documents/
+-  file1.txt  file2.txt  file3.txt
+osc@osc-VirtualBox:~/Ragy Fahmy$ ls
+Documents  My_Documents
+osc@osc-VirtualBox:~/Ragy Fahmy$ ls -a
+.  ..  Documents  .hidden_file  My_Documents
+osc@osc-VirtualBox:~/Ragy Fahmy$ ca .hidden_file 
+ca: command not found
+osc@osc-VirtualBox:~/Ragy Fahmy$ cat .hidden_file 
+osc@osc-VirtualBox:~/Ragy Fahmy$ echo hidden content > .hidden_file 
+osc@osc-VirtualBox:~/Ragy Fahmy$ cat .hidden_file 
+hidden content
+osc@osc-VirtualBox:~/Ragy Fahmy$ 
+osc@osc-VirtualBox:~/Ragy Fahmy$ mv ~/Ragy\ Fahmy/Documents/file1.txt ~/Ragy\ Fahmy/
+osc@osc-VirtualBox:~/Ragy Fahmy$ ls
+Documents  file1.txt  My_Documents
+osc@osc-VirtualBox:~/Ragy Fahmy$ mv ~/Ragy\ Fahmy/Documents/file2.txt ~/Ragy\ Fahmy/
+osc@osc-VirtualBox:~/Ragy Fahmy$ ls
+Documents  file1.txt  file2.txt  My_Documents
+osc@osc-VirtualBox:~/Ragy Fahmy$ cd ~
+osc@osc-VirtualBox:~$ rm -r Ragy\ Fahmy/
+osc@osc-VirtualBox:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+osc@osc-VirtualBox:~$ 
+
